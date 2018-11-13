@@ -14,7 +14,8 @@
    int max_index = 0; 
    for(int i = 1; i < size; i++){
       if(a[i] > max){
-         max_index = i; 
+         max_index = i;
+	 max = a[i]; 
       }
    }
    return max_index; 
@@ -31,7 +32,8 @@
    int min_index = 0; 
    for(int i = 1; i < size; i++){
       if(a[i] < min){
-         min_index = i; 
+         min_index = i;
+	 min = a[i];  
       }
    }
    return min_index; 
@@ -142,8 +144,8 @@
  // you should return a pointer to the new integer array of size len
  // with all of the elements in it set to 0
  int* createArray(int len) {
-   int array[len] = {0}; 
-   return array; 
+   int *a = new int[len];  
+   return a; 
  }
 
 
